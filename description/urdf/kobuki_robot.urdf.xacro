@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+    - Base      : kobuki
+    - Stacks    : hexagons
+    - 3d Sensor : kinect
+-->    
+<robot name="kobuki_with_laser" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find kobuki_description)/urdf/kobuki.urdf.xacro"/>
+  <xacro:include filename="$(find systalks_kobuki_exp)/description/urdf/hokuyo.urdf.xacro"/>  
+  <kobuki/>
+</robot>

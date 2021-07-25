@@ -1,0 +1,16 @@
+<!-- Launches Kobuki Gazebo simulation in willowgarage world with keyboard control -->
+<launch>
+  <!-- start Gazebo with an empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+  
+  <!-- spawn the robot -->
+  <arg name="ns" default="bot_1"/>
+  <group ns="bot_1">
+  <param name="tf_prefix" value="bot_1" />
+  <include file="$(find systalks_kobuki_exp)/launch/includes/robot.launch.xml">
+  <arg name="robot_name" value="bot_1"/>
+  <arg name="init_pose" value="-x 0.0 -y 0.0 -z 1.5"/>
+  </include>
+</group>
+</launch>
